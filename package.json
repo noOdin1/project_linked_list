@@ -1,0 +1,29 @@
+{
+  "name": "project_linked_list",
+  "version": "1.0.0",
+  "description": "TOP project @75% JS Path - Linked List",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noOdin1/project_linked_list.git"
+  },
+  "keywords": [
+    "Linked",
+    "List",
+    "data",
+    "structures"
+  ],
+  "author": "noOdin1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noOdin1/project_linked_list/issues"
+  },
+  "homepage": "https://github.com/noOdin1/project_linked_list#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.29.3",
+    "jest": "^30.3.0"
+  }
+}
