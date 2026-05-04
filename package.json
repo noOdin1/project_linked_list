@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "TOP project @75% JS Path - Linked List",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "watch": "jest --watch --verbose --coverage *.js"
   },
   "repository": {
     "type": "git",
