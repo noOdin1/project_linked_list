@@ -133,7 +133,7 @@ describe("Test for Linked List class when there is one item on the list", () => 
   test("Test removeAt() when list has 1 item", () => {
     let tmpList = new LinkedList();
     tmpList.append("dog");
-    // need an anonymous function to trigger the 'Throw' statement
-    expect(() => tmpList.removeAt(2)).toThrow("Index out of range");
+    expect(tmpList.removeAt(1)).toEqual({ nextNode: null, val: "dog" });
+    expect(tmpList.size()).toEqual(0);
   });
 });
