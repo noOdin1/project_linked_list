@@ -110,4 +110,21 @@ class LinkedList {
     this.headNode = newNode;
   }
 
+  insertAt(index, ...values) {
+    if (this.totalNodes < index || index < 1) {
+      throw RangeError("Index out of range");
+    }
+    let tmpNode = this.headNode;
+    for (let i = 1; i < index; i++) {
+      tmpNode = tmpNode.nextNode;
+    }
+    let nextNode = tmpNode.nextNode;
+    values.forEach((x) => {
+      tmpNode.nextNode = new Node(x);
+      tmpNode = tmpNode.nextNode;
+    });
+    tmpNode.nextNode = nextNode;
+    this.totalNodes += values.length;
+  }
+
 }
