@@ -116,12 +116,20 @@ describe("Test for Linked List class when there is one item on the list", () => 
     tmpList.insertAt(1, "cat", "squirrel");
     expect(tmpList.toString()).toEqual("(dog) -> (cat) -> (squirrel) -> null");
   });
-  // test("Test insertAt() when list has 1 item, before 1", () => {
-  //   let tmpList = new LinkedList();
-  //   tmpList.append("dog");
-  //   tmpList.insertAt(0, "cat", "squirrel");
-  //   expect(tmpList.toString()).toEqual("(cat) -> (squirrel) -> (dog) -> null");
-  // });
+  test("Test insertAt() when list has 1 item, at 1 (2 item to add)", () => {
+    let tmpList = new LinkedList();
+    tmpList.append("dog");
+    tmpList.insertAt(1, "cat", "squirrel");
+    expect(tmpList.toString()).toEqual("(dog) -> (cat) -> (squirrel) -> null");
+    expect(tmpList.size()).toEqual(3);
+  });
+  test("Test insertAt() when list has 1 item, at 1 (1 item to add)", () => {
+    let tmpList = new LinkedList();
+    tmpList.append("dog");
+    tmpList.insertAt(1, "cat");
+    expect(tmpList.toString()).toEqual("(dog) -> (cat) -> null");
+    expect(tmpList.size()).toEqual(2);
+  });
   test("Test removeAt() when list has 1 item", () => {
     let tmpList = new LinkedList();
     tmpList.append("dog");
