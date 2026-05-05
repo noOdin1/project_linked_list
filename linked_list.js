@@ -102,4 +102,12 @@ class LinkedList {
     this.tailNode = newNode;
   }
 
+  prepend(value) {
+    const newNode = new Node(value);
+    this.totalNodes++
+      ? (newNode.nextNode = this.headNode)
+      : (this.tailNode = newNode);
+    this.headNode = newNode;
+  }
+
 }
