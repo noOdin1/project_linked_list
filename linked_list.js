@@ -127,4 +127,19 @@ class LinkedList {
     this.totalNodes += values.length;
   }
 
+  removeAt(index) {
+    if (this.totalNodes < index || index < 1) {
+      throw RangeError("Index out of range");
+    }
+    let prevNode;
+    let tmpNode = this.headNode;
+    for (let i = 1; i < index; i++) {
+      prevNode = tmpNode;
+      tmpNode = tmpNode.nextNode;
+    }
+    prevNode.nextNode = tmpNode.nextNode;
+    tmpNode.nextNode = null;
+    this.totalNodes -= 1;
+    return tmpNode;
+  }
 }
