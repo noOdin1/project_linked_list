@@ -83,4 +83,15 @@ class LinkedList {
     return index;
   }
 
+  toString() {
+    if (this.totalNodes === 0) return null;
+    let tmpNode = this.headNode;
+    let tmpStr = "(" + tmpNode.val + ") -> ";
+    for (let i = 1; i < this.totalNodes; i++) {
+      tmpNode = tmpNode.nextNode;
+      tmpStr += "(" + tmpNode.val + ") -> ";
+    }
+    return tmpStr + "null";
+  }
+
 }
