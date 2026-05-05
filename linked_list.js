@@ -94,4 +94,12 @@ class LinkedList {
     return tmpStr + "null";
   }
 
+  append(value) {
+    const newNode = new Node(value);
+    this.totalNodes++
+      ? (this.tailNode.nextNode = newNode)
+      : (this.headNode = newNode);
+    this.tailNode = newNode;
+  }
+
 }
