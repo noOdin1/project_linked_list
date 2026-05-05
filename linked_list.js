@@ -35,4 +35,15 @@ class LinkedList {
     return this.tailNode;
   }
 
+  at(index) {
+    if (index == 0 || index > this.totalNodes) {
+      return undefined;
+    }
+    let tmpNode = this.headNode;
+    for (let i = 1; i < index; i++) {
+      tmpNode = tmpNode.nextNode;
+    }
+    return tmpNode;
+  }
+
 }
