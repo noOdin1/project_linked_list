@@ -46,4 +46,15 @@ class LinkedList {
     return tmpNode;
   }
 
+  pop() {
+    if (this.totalNodes === 0) {
+      return undefined;
+    }
+    let tmpNode = this.headNode;
+    this.headNode = tmpNode.nextNode;
+    tmpNode.nextNode = null;
+    this.totalNodes -= 1;
+    return tmpNode;
+  }
+
 }
