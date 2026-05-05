@@ -70,4 +70,17 @@ class LinkedList {
     return retVal;
   }
 
+  findIndex(value) {
+    let index = -1;
+    let tmpNode = this.headNode;
+    for (let i = 1; i <= this.totalNodes; i++) {
+      if (tmpNode.val === value) {
+        index = i;
+        break;
+      }
+      tmpNode = tmpNode.nextNode;
+    }
+    return index;
+  }
+
 }
