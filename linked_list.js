@@ -17,4 +17,22 @@ class LinkedList {
     this.totalNodes = 0;
   }
 
+  size() {
+    return this.totalNodes;
+  }
+
+  head() {
+    if (this.totalNodes === 0) {
+      return undefined;
+    }
+    return this.headNode;
+  }
+
+  tail() {
+    if (this.totalNodes === 0) {
+      return undefined;
+    }
+    return this.tailNode;
+  }
+
 }
