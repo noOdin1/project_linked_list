@@ -57,4 +57,17 @@ class LinkedList {
     return tmpNode;
   }
 
+  contains(value) {
+    let retVal = false;
+    let tmpNode = this.headNode;
+    for (let i = 0; i < this.totalNodes; i++) {
+      if (tmpNode.val === value) {
+        retVal = true;
+        break;
+      }
+      tmpNode = tmpNode.nextNode;
+    }
+    return retVal;
+  }
+
 }
