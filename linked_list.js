@@ -137,7 +137,8 @@ class LinkedList {
       prevNode = tmpNode;
       tmpNode = tmpNode.nextNode;
     }
-    prevNode.nextNode = tmpNode.nextNode;
+    if (prevNode !== null && prevNode !== undefined)
+      prevNode.nextNode = tmpNode.nextNode;
     tmpNode.nextNode = null;
     this.totalNodes -= 1;
     return tmpNode;
