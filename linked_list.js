@@ -2,7 +2,11 @@
 
 /* class definition for a node point */
 class Node {
-  constructor() {}
+  constructor(val = null, nextNode = null) {
+    // Initial conditions of a node point
+    this.val = val;
+    this.nextNode = null;
+  }
 }
 
 /* class definition for a linked list */
