@@ -52,87 +52,64 @@ describe("Test for Linked List class when the list is empty", () => {
 });
 
 describe("Test for Linked List class when there is one item on the list", () => {
-  test("Test size() when list has 1 item", () => {
-    let tmpList = new LinkedList();
+  let tmpList;
+  beforeEach(() => {
+    tmpList = new LinkedList();
     tmpList.append("dog");
+  });
+  test("Test size() when list has 1 item", () => {
     expect(tmpList.size()).toEqual(1);
   });
   test("Test head() when list has 1 item", () => {
-    let tmpList = new LinkedList();
-    tmpList.append("dog");
     // Returns a 'Node' object
     expect(tmpList.head()).toEqual({ nextNode: null, val: "dog" });
   });
   test("Test tail() when list has 1 item", () => {
-    let tmpList = new LinkedList();
-    tmpList.append("dog");
     // Returns a 'Node' object
     expect(tmpList.tail()).toEqual({ nextNode: null, val: "dog" });
   });
   test("Test at() when list has 1 item", () => {
-    let tmpList = new LinkedList();
-    tmpList.append("dog");
     // Returns a 'Node' object
     expect(tmpList.at(1)).toEqual({ nextNode: null, val: "dog" });
   });
   test("Test pop() when list has 1 item", () => {
-    let tmpList = new LinkedList();
-    tmpList.append("dog");
     // Returns a 'Node' object
     expect(tmpList.pop()).toEqual({ nextNode: null, val: "dog" });
     // Test to see if size is correct
     expect(tmpList.size()).toEqual(0);
   });
   test("Test contains() when list has 1 item", () => {
-    let tmpList = new LinkedList();
-    tmpList.append("dog");
     expect(tmpList.contains("dog")).toEqual(true);
   });
   test("Test findIndex() when list has 1 item", () => {
-    let tmpList = new LinkedList();
-    tmpList.append("dog");
     expect(tmpList.findIndex("dog")).toEqual(1);
   });
   test("Test toString() when list has 1 item", () => {
-    let tmpList = new LinkedList();
-    tmpList.append("dog");
     expect(tmpList.toString()).toEqual("(dog) -> null");
   });
   test("Test append() when list has 1 item", () => {
-    let tmpList = new LinkedList();
-    tmpList.append("dog");
     tmpList.append("squirrel");
     expect(tmpList.toString()).toEqual("(dog) -> (squirrel) -> null");
   });
   test("Test prepend() when list has 1 item", () => {
-    let tmpList = new LinkedList();
-    tmpList.append("dog");
     tmpList.prepend("squirrel");
     expect(tmpList.toString()).toEqual("(squirrel) -> (dog) -> null");
   });
   test("Test insertAt() when list has 1 item, after 1", () => {
-    let tmpList = new LinkedList();
-    tmpList.append("dog");
     tmpList.insertAt(1, "cat", "squirrel");
     expect(tmpList.toString()).toEqual("(dog) -> (cat) -> (squirrel) -> null");
   });
   test("Test insertAt() when list has 1 item, at 1 (2 item to add)", () => {
-    let tmpList = new LinkedList();
-    tmpList.append("dog");
     tmpList.insertAt(1, "cat", "squirrel");
     expect(tmpList.toString()).toEqual("(dog) -> (cat) -> (squirrel) -> null");
     expect(tmpList.size()).toEqual(3);
   });
   test("Test insertAt() when list has 1 item, at 1 (1 item to add)", () => {
-    let tmpList = new LinkedList();
-    tmpList.append("dog");
     tmpList.insertAt(1, "cat");
     expect(tmpList.toString()).toEqual("(dog) -> (cat) -> null");
     expect(tmpList.size()).toEqual(2);
   });
   test("Test removeAt() when list has 1 item", () => {
-    let tmpList = new LinkedList();
-    tmpList.append("dog");
     expect(tmpList.removeAt(1)).toEqual({ nextNode: null, val: "dog" });
     expect(tmpList.size()).toEqual(0);
   });
