@@ -11,5 +11,10 @@ class Node {
 
 /* class definition for a linked list */
 class LinkedList {
-  constructor() {}
+  constructor() {
+    this.headNode = null;
+    this.tailNode = null;
+    this.totalNodes = 0;
+  }
+
 }
