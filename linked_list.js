@@ -143,3 +143,5 @@ class LinkedList {
     return tmpNode;
   }
 }
+
+export { Node, LinkedList };
