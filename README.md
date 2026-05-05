@@ -19,12 +19,12 @@ This project will implement a common data structure, the Linked List.<br>
 &emsp;9. pop() should remove the head node from the list and return its value.<br>
 &emsp;&emsp;&nbsp;If it’s used on an empty list, it should just return undefined.<br>
 &emsp;10. contains(value) returns true if the passed in value is in the list<br>
-&emsp;&emsp;&nbsp;and otherwise returns false.<br>
+&emsp;&emsp;&ensp;and otherwise returns false.<br>
 &emsp;11. findIndex(value) returns the index of the node containing the given value.<br>
-&emsp;&emsp;&nbsp;If the value can’t be found in the list, it should return -1.<br>
-&emsp;&emsp;&nbsp;If more than one node has a value matching the given value,<br>
-&emsp;&emsp;&nbsp;it should return the index of the first node with the matching value.<br>
+&emsp;&emsp;&ensp;If the value can’t be found in the list, it should return -1.<br>
+&emsp;&emsp;&ensp;If more than one node has a value matching the given value,<br>
+&emsp;&emsp;&ensp;it should return the index of the first node with the matching value.<br>
 &emsp;12. toString() represents your LinkedList objects as strings,<br>
-&emsp;&emsp;&nbsp;so you can print them out and preview them in the console.<br>
-&emsp;&emsp;&nbsp;If the list is empty, it should return an empty string.<br>
-&emsp;&emsp;&nbsp;The format should be: ( value ) -> ( value ) -> ( value ) -> null.<br>
+&emsp;&emsp;&ensp;so you can print them out and preview them in the console.<br>
+&emsp;&emsp;&ensp;If the list is empty, it should return an empty string.<br>
+&emsp;&emsp;&ensp;The format should be: ( value ) -> ( value ) -> ( value ) -> null.<br>
