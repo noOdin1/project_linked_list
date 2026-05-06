@@ -126,22 +126,53 @@ describe("Test for Linked List class when there is one item on the list", () => 
     tmpList.prepend("squirrel");
     expect(tmpList.toString()).toEqual("(squirrel) -> (dog) -> null");
   });
-  test("Test insertAt() when list has 1 item, after 1", () => {
-    tmpList.insertAt(1, "cat", "squirrel");
-    expect(tmpList.toString()).toEqual("(dog) -> (cat) -> (squirrel) -> null");
+
+  test("Test insertAt() when list has 1 item, 1 item to add, index = 0", () => {
+    expect(() => tmpList.insertAt(0, "cat")).toThrow("Index out of range");
   });
-  test("Test insertAt() when list has 1 item, at 1 (2 item to add)", () => {
-    tmpList.insertAt(1, "cat", "squirrel");
-    expect(tmpList.toString()).toEqual("(dog) -> (cat) -> (squirrel) -> null");
-    expect(tmpList.size()).toEqual(3);
-  });
-  test("Test insertAt() when list has 1 item, at 1 (1 item to add)", () => {
+  test("Test insertAt() when list has 1 item, 1 item to add, index = 1", () => {
     tmpList.insertAt(1, "cat");
+    expect(tmpList.toString()).toEqual("(cat) -> (dog) -> null");
+    expect(tmpList.size()).toEqual(2);
+  });
+  test("Test insertAt() when list has 1 item, 1 item to add, index = 2", () => {
+    // console.log();
+    tmpList.insertAt(2, "cat");
     expect(tmpList.toString()).toEqual("(dog) -> (cat) -> null");
     expect(tmpList.size()).toEqual(2);
   });
-  test("Test removeAt() when list has 1 item", () => {
+  test("Test insertAt() when list has 1 item, 1 item to add, index = 3", () => {
+    expect(() => tmpList.insertAt(3, "cat")).toThrow("Index out of range");
+  });
+
+  test("Test insertAt() when list has 1 item, 2 items to add, index = 0", () => {
+    expect(() => tmpList.insertAt(0, "cat", "squirrel")).toThrow(
+      "Index out of range",
+    );
+  });
+  test("Test insertAt() when list has 1 item, 2 items to add, index = 1", () => {
+    tmpList.insertAt(1, "cat", "squirrel");
+    expect(tmpList.toString()).toEqual("(cat) -> (squirrel) -> (dog) -> null");
+  });
+  test("Test insertAt() when list has 1 item, 2 items to add, index = 2", () => {
+    tmpList.insertAt(2, "cat", "squirrel");
+    expect(tmpList.toString()).toEqual("(dog) -> (cat) -> (squirrel) -> null");
+  });
+  test("Test insertAt() when list has 1 item, 2 items to add, index = 3", () => {
+    expect(() => tmpList.insertAt(3, "cat", "squirrel")).toThrow(
+      "Index out of range",
+    );
+  });
+
+  test("Test removeAt() when list has 1 item, index = 0", () => {
+    expect(() => tmpList.removeAt(0)).toThrow("Index out of range");
+  });
+  test("Test removeAt() when list has 1 item, index = 1", () => {
     expect(tmpList.removeAt(1)).toEqual({ nextNode: null, val: "dog" });
     expect(tmpList.size()).toEqual(0);
   });
+  test("Test removeAt() when list has 1 item, index = 2", () => {
+    expect(() => tmpList.removeAt(2)).toThrow("Index out of range");
+  });
 });
+
