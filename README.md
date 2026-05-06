@@ -32,7 +32,7 @@ This project will implement a common data structure, the Linked List.<br>
 | ------------------------------------------------------------------------------------------- | :------------------------------------: |
 | 1. Test all the methods/functions in LinkedList class with empty list.<br>                  |       [done] :white_check_mark:        |
 | 2. Test all the methods/functions in LinkedList class with list containing 1 item only.<br> |       [done] :white_check_mark:        |
-| 3. Test all the methods/functions in LinkedList class with list containing 2 item only.<br> | [in progress] :hourglass_flowing_sand: |
+| 3. Test all the methods/functions in LinkedList class with list containing 2 item only.<br> |       [done] :white_check_mark:        |
 
 
 This project has objective and 'good' to have objectives. This leaves some area for my own design.<br>
