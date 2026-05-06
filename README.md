@@ -42,3 +42,10 @@ The following is a list of my design criteria for this project:<br>
 | -------------------------------------------------------------------------------------------------- | :-----------------------: |
 | 1. Linked List starts with index 1.<br>                                                            | [done] :white_check_mark: |
 | 2. When the linked list is empty, prepending or appending items acts like normal adding items.<br> | [done] :white_check_mark: |
+| 3. If the linked list is empty, the function insertAt() with index 1 would add items normally.<br> | [done] :white_check_mark: |
+| 4. Empty linked list, insertAt() with index 0 or 2 would throw RangeError.<br>                     | [done] :white_check_mark: |
+| 5. Linked list with 1 item, insertAt() with index 0 and 3 would throw RangeError.<br>              | [done] :white_check_mark: |
+| 6. Linked list with 1 item, insertAt() with index 1 would prepend the new item.<br>                | [done] :white_check_mark: |
+| 7. Linked list with 1 item, insertAt() with index 2 would append the new item.<br>                 | [done] :white_check_mark: |
+| 8. Linked list with 0 item, removeAt() with index any number would throw RangeError.<br>           | [done] :white_check_mark: |
+| 9. Linked list with 1 item, removeAt() with index 0 or 2 would throw RangeError.<br>               | [done] :white_check_mark: |
