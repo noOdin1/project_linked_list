@@ -113,7 +113,9 @@ class LinkedList {
   insertAt(index, ...values) {
     if (this.totalNodes < index || index < 1) {
       if (!(this.totalNodes == 0 && index == 1)) {
-        throw RangeError("Index out of range");
+        if (!(this.totalNodes + 1 == index)) {
+          throw RangeError("Index out of range");
+        }
       }
     }
     if (this.totalNodes === 1 || this.totalNodes === 0) {
