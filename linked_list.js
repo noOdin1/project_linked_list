@@ -118,7 +118,12 @@ class LinkedList {
         }
       }
     }
-    if (this.totalNodes === 1 || this.totalNodes === 0) {
+    let newLength = values.length;
+    if (
+      (this.totalNodes === 1 && index == 1) ||
+      (this.totalNodes === 0 && index == 1) ||
+      index === 1
+    ) {
       while (values.length != 0) {
         this.prepend(values.pop());
       }
