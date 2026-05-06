@@ -129,6 +129,12 @@ class LinkedList {
       }
       return;
     }
+    if (index === this.totalNodes + 1) {
+      while (values.length != 0) {
+        this.append(values.reverse().pop());
+      }
+      return;
+    }
     let tmpNode = this.headNode;
     for (let i = 1; i < index; i++) {
       tmpNode = tmpNode.nextNode;
