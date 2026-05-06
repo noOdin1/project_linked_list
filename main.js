@@ -67,3 +67,7 @@ myList.append("dog");
 console.log(myList.at(1));
 console.log(myList.head());
 console.log(myList.pop());
+
+const anotherList = new LinkedList();
+anotherList.insertAt(1, "cat", "dog");
+console.log(anotherList.head());
