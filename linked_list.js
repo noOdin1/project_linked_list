@@ -136,16 +136,17 @@ class LinkedList {
       return;
     }
     let tmpNode = this.headNode;
+    let prevNode;
     for (let i = 1; i < index; i++) {
+      prevNode = tmpNode;
       tmpNode = tmpNode.nextNode;
     }
-    let nextNode = tmpNode.nextNode;
     values.forEach((x) => {
-      tmpNode.nextNode = new Node(x);
-      tmpNode = tmpNode.nextNode;
+      prevNode.nextNode = new Node(x);
+      prevNode = prevNode.nextNode;
     });
-    tmpNode.nextNode = nextNode;
-    this.totalNodes += values.length;
+    prevNode.nextNode = tmpNode;
+    this.totalNodes += newLength;
   }
 
   removeAt(index) {
