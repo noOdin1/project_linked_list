@@ -45,7 +45,38 @@ describe("Test for Linked List class when the list is empty", () => {
       "Index out of range",
     );
   });
-  test("Test removeAt() when list is empty", () => {
+  test("Test insertAt() when list is empty, index = 0", () => {
+    // need an anonymous function to trigger the 'Throw' statement
+    expect(() => tmpList.insertAt(0, "dog")).toThrow("Index out of range");
+  });
+  test("Test insertAt() when list is empty, adding 1 item, index = 1", () => {
+    tmpList.insertAt(1, "cat");
+    expect(tmpList.head()).toEqual({ nextNode: null, val: "cat" });
+  });
+  test("Test insertAt() when list is empty, adding 1 item, index = 2", () => {
+    // need an anonymous function to trigger the 'Throw' statement
+    expect(() => tmpList.insertAt(2, "cat")).toThrow("Index out of range");
+  });
+  test("Test insertAt() when list is empty, adding 2 items", () => {
+    // need an anonymous function to trigger the 'Throw' statement
+    tmpList.insertAt(1, "cat", "dog");
+    expect(tmpList.head()).toEqual({
+      val: "cat",
+      nextNode: {
+        val: "dog",
+        nextNode: null,
+      },
+    });
+  });
+  test("Test removeAt() when list is empty, index = 0", () => {
+    // need an anonymous function to trigger the 'Throw' statement
+    expect(() => tmpList.removeAt(0)).toThrow("Index out of range");
+  });
+  test("Test removeAt() when list is empty, index = 1", () => {
+    // need an anonymous function to trigger the 'Throw' statement
+    expect(() => tmpList.removeAt(1)).toThrow("Index out of range");
+  });
+  test("Test removeAt() when list is empty, index = 2", () => {
     // need an anonymous function to trigger the 'Throw' statement
     expect(() => tmpList.removeAt(2)).toThrow("Index out of range");
   });
