@@ -233,4 +233,9 @@ describe("Test for Linked List class when there is 2 items on the list", () => {
       "Index out of range",
     );
   });
+  test("Test removeAt() when list has 2 item, index = 1", () => {
+    expect(tmpList.removeAt(1)).toEqual({ nextNode: null, val: "dog" });
+    expect(tmpList.head()).toEqual({ val: "cat", nextNode: null });
+    expect(tmpList.size()).toEqual(1);
+  });
 });
