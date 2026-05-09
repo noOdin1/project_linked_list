@@ -57,6 +57,17 @@ class LinkedList {
     return tmpNode.val;
   }
 
+  changeValueAt(index, value) {
+    if (index == 0 || index > this.totalNodes) {
+      return undefined;
+    }
+    let tmpNode = this.headNode;
+    for (let i = 1; i < index; i++) {
+      tmpNode = tmpNode.nextNode;
+    }
+    tmpNode.val = value;
+  }
+
   pop() {
     if (this.totalNodes === 0) {
       return undefined;
