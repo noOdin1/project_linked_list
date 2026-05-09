@@ -175,11 +175,14 @@ class LinkedList {
     if (this.totalNodes < index || index < 1) {
       throw RangeError("Index out of range");
     }
-    let prevNode;
+    let prevNode = null;
     let tmpNode = this.headNode;
     for (let i = 1; i < index; i++) {
       prevNode = tmpNode;
       tmpNode = tmpNode.nextNode;
+    }
+    if (prevNode == null) {
+      return this.pop();
     }
     if (prevNode !== null && prevNode !== undefined)
       prevNode.nextNode = tmpNode.nextNode;
